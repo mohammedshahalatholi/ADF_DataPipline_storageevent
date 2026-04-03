@@ -1,0 +1,25 @@
+{
+	"name": "streventtrigger",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkservicesDL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Fact_Sales_1.csv",
+				"folderPath": "csvfile",
+				"fileSystem": "sourceforeventtrigger"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
